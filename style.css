@@ -1,0 +1,233 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+:root {
+    --cor-texto-escuro: #3d3d3d;
+    --cor-texto-claro: #eae3e3;
+    --cor-fundo: #d2d9f0;
+    --cor-nav: #2E4286;
+    --cor-footer: #24356A;
+}
+
+body{
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--cor-fundo);
+}
+
+h1{
+    font-size: 35px;
+    color: var(--cor-footer);
+    border-bottom: 2px solid var(--cor-nav);
+    padding-bottom: 5px;
+    display: inline-block;
+    margin-bottom: 12px;
+}
+
+h2 {
+    font-size: 22px;
+    color: var(--cor-nav);
+}
+
+p {
+    margin-top: 0px;
+    margin-bottom: 5px; 
+    font-size: 18px;
+    color: var(--cor-texto-escuro);
+}
+
+li {
+    margin-bottom: 5px;
+    font-size: 18px;
+    color: var(--cor-texto-escuro)
+}
+
+ul li::marker {
+    color: var(--cor-nav)
+}
+
+#layout {
+    display: grid;
+    grid-template-rows: 100px auto 100px;
+    grid-template-areas: "nav" "main" "footer";
+}
+
+#nav {
+    background-color: var(--cor-nav);
+    grid-area: nav;
+    font-size: 18px;
+    color: var(--cor-texto-claro);
+    align-items: center;
+    border-bottom: 22px solid var(--cor-footer);
+}
+
+#linha{
+    display: flex;
+    gap: 20px;
+    margin-top: 30px;
+    margin-left: 20px;
+    align-items: center;
+}
+
+#linha a{
+    color: var(--cor-texto-claro);
+    text-decoration: none;
+    transition: all 0.3s ease; 
+    display: inline-block;
+}
+
+#linha a:hover {
+    text-decoration: underline; 
+    transform: translateY(-5px);
+}
+
+.ativo{
+    font-weight: bold;
+    color: var(--cor-texto-claro);
+    border: 2px solid var(--cor-nav);
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5); 
+}
+
+#canto {
+    display: flex;
+    align-items: center; 
+    position: absolute; 
+    top: 10px;
+    right: 20px; 
+}
+
+#canto img {
+    width: 80px;
+    height: 80px;
+    margin-left: 10px;
+    top: 5px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+#canto p {
+    margin: 0;
+    font-size: 18px;
+    color: var(--cor-texto-claro)
+}
+
+#main-inicio {
+    display: grid;
+    grid-template-columns: 1fr 2fr; 
+    gap: 10px;
+}
+
+#main-inicio img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); 
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 90px;
+}
+
+#texto-inicio {
+    margin-top: 60px;
+    margin-left: 120px;
+    line-height: 1.0;      
+}
+
+#texto-inicio ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+#main-academica {
+    display: grid;
+    gap: 20px;
+    text-align: center;
+}
+
+#main-academica img {
+    width: 500px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); 
+    display: block; 
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+#coluna {
+    display: grid; 
+    grid-template-columns: auto auto; 
+    justify-content: center; 
+    gap: 40px;
+}
+
+.disciplinas {
+    padding: 10px; 
+    width: auto;
+    text-align: center; 
+}
+
+.disciplinas ul {
+    list-style-position: inside; 
+    padding: 0;                 
+    margin: 0 auto;              
+    text-align: center;          
+}
+
+.texto-academica {
+    text-align: center;
+    margin-left: 80px;
+    margin-right: 80px;
+    margin-bottom: 35px;
+}
+
+#main-profissional {
+    margin-left: 50px;
+    margin-right: 50px; 
+    margin-top: 40px;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+#main-profissional img {
+    width: 500px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); 
+    display: block; 
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+#footer{
+    background-color: var(--cor-footer);
+    grid-area: footer;
+    display: flex;
+    justify-content: center; 
+    gap: 50px;
+    padding: 20px;
+}
+
+#footer p {
+    font-size: 14px;
+    color: var(--cor-texto-claro);
+}
+  
+.contato {
+    display: flex;
+    flex-direction: row; 
+    align-items: center; 
+    gap: 1px;
+}
+
+.contato img {
+    width: 55px; 
+    margin-right: 10px;
+}
+
